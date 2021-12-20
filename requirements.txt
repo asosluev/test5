@@ -1,6 +1,7 @@
 requests
 pytelegrambotapi
 pymongo
+pymongo[srv]
 dependency_injector
 geocoder
 jinja2
