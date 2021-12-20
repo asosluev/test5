@@ -109,10 +109,10 @@ def helpCovidVZones_command_handler(message):
         template = Template(file.read())
         markuozones=types.InlineKeyboardMarkup()
         markuozones.row(
-            telebot.types.InlineKeyboardButton(text='Зелений', callback_data='green1'),
-            telebot.types.InlineKeyboardButton(text='Жовтий', callback_data='yellow'),
-            telebot.types.InlineKeyboardButton(text='Помаранчевий ', callback_data='orange'),
-            telebot.types.InlineKeyboardButton(text='Червоний', callback_data='red')
+            telebot.types.InlineKeyboardButton(text='🟢Зелений', callback_data='green1'),
+            telebot.types.InlineKeyboardButton(text='🟡	Жовтий', callback_data='yellow'),
+            telebot.types.InlineKeyboardButton(text='🟠Помаранчевий ', callback_data='orange'),
+            telebot.types.InlineKeyboardButton(text='🔴Червоний', callback_data='red')
         )
     bot.send_message(cid, template.render(user_name=message.chat.username), parse_mode='HTML', reply_markup=markuozones)
 
