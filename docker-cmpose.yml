@@ -1,0 +1,11 @@
+web:
+  build: .
+  command: python -u setup.py
+  ports:
+    -"5000:5000"
+  volumes:
+    - ./todo
+  links:
+    -db
+  db:
+    images: mongo:5.0.3
